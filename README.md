@@ -5,7 +5,7 @@
 
 ## Быстрая установка
 ```bash
-sudo curl -fsSL https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/mtgctl/main/mtgctl -o /usr/local/bin/mtgctl && sudo chmod +x /usr/local/bin/mtgctl
+sudo curl -fsSL https://raw.githubusercontent.com/superillegal/mtgctl/refs/heads/main/mtgctl -o /usr/local/bin/mtgctl && sudo chmod +x /usr/local/bin/mtgctl
 ```
 
 
