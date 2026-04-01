@@ -8,6 +8,11 @@
 sudo curl -fsSL https://raw.githubusercontent.com/superillegal/mtgctl/refs/heads/main/mtgctl -o /usr/local/bin/mtgctl && sudo chmod +x /usr/local/bin/mtgctl
 ```
 
+Установить:
+```bash
+sudo mtgctl install
+```
+
 
 Скрипт:
 - устанавливает Docker при необходимости
