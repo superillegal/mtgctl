@@ -1,4 +1,4 @@
-# mtgctl
+# MTGTCL
 
 Утилита для управления `mtg` (MTProto FakeTLS proxy) через Docker.
 
@@ -20,31 +20,27 @@ sudo mtgctl install
 - генерирует FakeTLS secret
 - создаёт конфиг в `/etc/mtg`
 - запускает контейнер
-- умеет показывать ссылки подключения, логи, менять порт/домен, обновлять secret и настраивать SOCKS5 upstream
+- умеет показывать ссылки подключения, логи, менять порт/домен, обновлять secret
 
-## Возможности
-
-- интерактивная установка
-- управление контейнером: `start`, `stop`, `restart`, `status`
-- просмотр логов: `logs`
-- генерация ссылок подключения: `link`
-- смена порта: `set-port`
-- смена FakeTLS-домена: `set-domain`
-- ротация secret: `rotate-secret`
-- proxy chaining через SOCKS5 upstream
-- обновление контейнера: `update`
-- удаление: `uninstall`
+## Команды
+```bash
+mtgctl install                 Установка/настройка (спросит порт/домен/апстрим)
+mtgctl status                  Статус контейнера
+mtgctl start | stop | restart  Управление
+mtgctl logs                    Просмотр логов
+mtgctl link                    Показать tg:// и t.me ссылки 
+mtgctl config                  Показать текущий config.toml и upstreams.list
+mtgctl gen-secret [domain]     Сгенерировать FakeTLS secret (hex, ee...)
+mtgctl rotate-secret           Ротация secret
+mtgctl set-domain <domain>     Смена FakeTLS-домена
+mtgctl set-port <port>         Смена порта
+mtgctl update                  Обновление контейнера
+mtgctl uninstall               Удаление контейнера и конфигов
+```
 
 ## Требования
 
-- Ubuntu / Debian
+- Ubuntu
 - root-доступ (`sudo`)
-- доступ в интернет
 - открытый TCP-порт для клиентов MTProto
 
-## Быстрая установка
-
-Установить утилиту:
-
-```bash
-sudo curl -fsSL https://raw.githubusercontent.com/<YOUR_GITHUB_USERNAME>/mtgctl/main/mtgctl -o /usr/local/bin/mtgctl && sudo chmod +x /usr/local/bin/mtgctl
