@@ -1,4 +1,4 @@
-# MTGTCL
+# MTGCTL
 
 Утилита для управления `mtg` (MTProto FakeTLS proxy) через Docker.
 
